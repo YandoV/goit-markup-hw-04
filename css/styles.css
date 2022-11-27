@@ -23,6 +23,7 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 .link {
   text-decoration: none;
 }
@@ -46,7 +47,7 @@ ul {
   padding: 94px 0;
 }
 
-/*----------------------------------------------------------HEADER*/
+/*!---------------------------------------------------------------Header*/
 .header {
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
@@ -87,6 +88,7 @@ ul {
   letter-spacing: 0.02em;
   color: var(--primary-color);
   margin-right: 50px;
+  padding: 5px 0 5px 0;
 }
 
 .header-link:hover,
@@ -99,12 +101,14 @@ ul {
 }
 
 .header-address-link {
+  display: inline-flex;
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: var(--tertiary-color);
   margin-left: 50px;
+  padding: 5px 0 5px 0;
 }
 
 .header-address-link:hover,
@@ -112,12 +116,27 @@ ul {
   color: var(--accent-color);
 }
 
-/*----------------------------------------------------MAIN */
+.header-address-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
 
-/*----------------------------------------------------HERO */
+/*!---------------------------------------------------------------Main*/
+/* .main {} */
+
+/*!---------------------------------------------------------------Hero*/
 .hero {
   background-color: #2f303a;
-  padding: 200px 0;
+  padding: 170px 0;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/heroback.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -151,7 +170,7 @@ ul {
   background: #188ce8;
 }
 
-/*-------------------------------------------------BENEFITS */
+/*!---------------------------------------------------------------Benefits*/
 .benefits {
   padding: 94px 0;
 }
@@ -168,6 +187,16 @@ ul {
 
 .benefits-items:nth-child(-n + 3) {
   margin-right: 30px;
+}
+
+.benefits-icon-div {
+  width: 270px;
+  min-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
 }
 
 .benefits-title {
@@ -190,7 +219,7 @@ ul {
   display: block;
 }
 
-/*---------------------------------------------------ABOUT*/
+/*!---------------------------------------------------------------About*/
 .about {
   padding: 0 0 94px 0;
 }
@@ -212,7 +241,7 @@ ul {
   margin-right: 30px;
 }
 
-/*---------------------------------------------------TEAM */
+/*!---------------------------------------------------------------Team*/
 .team {
   background-color: #f5f4fa;
 }
@@ -239,6 +268,7 @@ ul {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  padding-bottom: 30px;
 }
 
 .team-items:nth-child(-n + 3) {
@@ -250,7 +280,7 @@ ul {
 }
 
 .team-desc {
-  padding: 30px 0;
+  padding-top: 30px;
 }
 
 .team-user {
@@ -269,12 +299,94 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--tertiary-color);
+  margin-bottom: 16px;
 }
 
-/*-----------------------------------------------FOOTER */
+.team-link-list {
+  width: 100%;
+  padding: 0 32px;
+  display: flex;
+}
+
+.team-link-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-link {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  color: #afb1b8;
+}
+
+.team-link:hover,
+.team-link:focus {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.team-link-icon {
+  fill: currentColor;
+}
+
+/*!--------------------------------------------------Company */
+.companies-title {
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-color);
+  margin-bottom: 50px;
+}
+
+.company-list {
+  width: 1170px;
+  min-height: 92px;
+  display: flex;
+}
+
+.company-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.company-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: #afb1b8;
+}
+
+.company-link:hover,
+.company-link:focus {
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.company-icon {
+  fill: currentColor;
+}
+
+/*!---------------------------------------------------------------Footer*/
 .footer {
   background-color: #2f303a;
   padding: 60px 0;
+  max-height: 252px;
+}
+
+.footer-section {
+  display: flex;
+}
+
+.footer-address {
+  margin-right: 70px;
 }
 
 .footer-logo {
@@ -290,10 +402,11 @@ ul {
   color: var(--accent-color);
 }
 
-.footer-address {
+.footer-address-list {
   width: 231px;
   min-height: 81px;
   margin-top: 20px;
+  display: block;
 }
 
 .footer-links {
@@ -305,20 +418,66 @@ ul {
   display: block;
 }
 
-.footer-links:nth-child(-n + 2) {
+.footer-address-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.footer-links ~ a {
+.footer-address-item:not(:first-child) .footer-links {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-links:hover,
-.footer-links:focus {
+.footer-address-item:hover .footer-links,
+.footer-address-item:focus .footer-links {
   color: var(--accent-color);
 }
 
-/* ----------------------------------------PORTFOLIO--------------------------------- */
+.footer-social {
+  width: 206px;
+  height: 132px;
+  padding: 12px 0 40px 0;
+}
+
+.footer-social-title {
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.footer-social-list {
+  width: 100%;
+  padding: 0;
+  display: flex;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-social-icon {
+  fill: currentColor;
+}
+
+/*!=====================================================PORTFOLIO*/
+/* .features {} */
 
 .features-list-btn {
   display: flex;
@@ -367,6 +526,12 @@ ul {
   background: #ffffff;
   width: 370px;
   min-height: 404px;
+}
+
+.features-items:hover,
+.features-items:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .features-img {
